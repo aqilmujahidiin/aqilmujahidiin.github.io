@@ -23,7 +23,7 @@ function addPackage() {
         <label for="package${packageCount}">Package ${packageCount}:</label>
         <input type="text" id="package${packageCount}Description" name="package${packageCount}Description" placeholder="Package description" class="input-full-width">
         <input type="number" id="price${packageCount}" name="price${packageCount}" placeholder="Price (USD)" class="input-half-width">
-        <button class="gohapus" type="button" onclick="removePackage(${packageCount})">x</button>
+        <button type="button" onclick="removePackage(${packageCount})">x</button>
     `;
     packageOptions.appendChild(packageDiv);
 }
@@ -43,7 +43,7 @@ function generateHTML() {
     const normalPrice = document.getElementById('normalPrice').value;
     const isPromo = document.getElementById('isPromo').checked;
     const productDiscount = isPromo ? document.getElementById('productDiscount').value : '0';
-    const productStatus = document.querySelector('input[name="productStatus"]:checked') ? document.querySelector('input[name="productStatus"]:checked').value : '';
+    const productStatus = document.querySelector('input[name="productStatus"]:checked') ? document.querySelector('input[name="productStatus"]:checked').value : 'on';
     const productDescription = document.getElementById('productDescription').value.replace(/\n/g, '<br/>');
     const productImage = document.getElementById('productImage').value;
 
@@ -75,7 +75,7 @@ function generateHTML() {
     <br class="remove_element" />
     <div class="remove_style" style="text-align: center;">
         <div class="remove_element" style="background: lightgray; border: 1px solid lightgray; display: inline-block; font-family: Roboto, sans-serif; font-size: 90%; margin: 0px; padding: 20px; text-align: center; width: 40%;">Discount ( % )</div>
-                <div class="data_discount remove_style" style="box-shadow: lightgray 0px 0px 0px 1px inset; display: inline-block; font-family: Roboto, sans-serif; margin: 0px; padding: 20px; text-align: center; width: 40%;">${productDiscount}</div>
+        <div class="data_discount remove_style" style="box-shadow: lightgray 0px 0px 0px 1px inset; display: inline-block; font-family: Roboto, sans-serif; margin: 0px; padding: 20px; text-align: center; width: 40%;">${productDiscount}</div>
     </div>
 </div>
 <br />
