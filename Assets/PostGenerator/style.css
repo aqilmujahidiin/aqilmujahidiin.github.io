@@ -87,7 +87,7 @@ button:hover {
 .package {
     margin-bottom: 15px;
 }
-.package button::before {
+.package gohapus::before {
     content:'x'
     border-radius: 100%;
     height: 30px;
