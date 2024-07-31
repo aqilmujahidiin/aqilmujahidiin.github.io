@@ -23,7 +23,7 @@ function addPackage() {
         <label for="package${packageCount}">Package ${packageCount}:</label>
         <input type="text" id="package${packageCount}Description" name="package${packageCount}Description" placeholder="Package description" class="input-full-width">
         <input type="number" id="price${packageCount}" name="price${packageCount}" placeholder="Price (USD)" class="input-half-width">
-        <button class="gohapus"type="button" onclick="removePackage(${packageCount})">x</button>
+        <button class="gohapus" type="button" onclick="removePackage(${packageCount})">x</button>
     `;
     packageOptions.appendChild(packageDiv);
 }
