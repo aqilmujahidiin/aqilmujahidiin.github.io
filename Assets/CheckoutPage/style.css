@@ -281,10 +281,12 @@ Website    : cirebonesia.com
         font-weight: 600;
 }
 .bank-details {
+	width:100%
     margin-top: 20px;
     padding: 15px;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
+	color:#000;
     border-radius: 5px;
 }
 
