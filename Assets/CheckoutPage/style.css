@@ -60,3 +60,7 @@ button:hover:enabled { background-color: #0056b3; }
 @keyframes copiedAnimation { 0% { background-color: #007bff; } 100% { background-color: #28a745; } } 
 .disclaimer { margin-top: 20px; padding: 10px; background-color: #ffdddd; border-left: 6px solid #f44336; border-radius: 5px; } 
 .disclaimer p { margin: 0; color: #333; font-size: 14px; }
+@media (max-width: 768px) { 
+  form { display: flex; flex-wrap: wrap; padding: 40px 12px; } 
+  button { margin-top: 10px; } .orderSummary { padding: 12px; } 
+  .payment-buttons { display: flex; width: 100%; gap: 0; margin-top: 20px; flex-direction: column; } }
