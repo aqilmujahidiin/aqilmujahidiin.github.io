@@ -1,345 +1,62 @@
 /*
 **********************************************************
-Name       : Post Generator By 
-Version    : 1.11
-Website    : cirebonesia.com
+Version    : 1.12
+Website    : cirebonkreatif.com
 **********************************************************
 */
-
-.pageTitle,.waFix.kanan, .shareWrapper,#footer,#header, .feature_tw {
-  display:none;
-      }
-        #page-loader {
-            display: none !important;
-        }
-
-        body {
-            padding: 0 !important;
-        }
-		.wrapper.postAside{
-          background:#fff;
-          margin-top:0 !important;
-      }
-        .postAside {
-            display: block;
-        }
-
-        .pageTitle .item h1 {
-            display: none;
-        }
-
-        h2 {
-            color: var(--dominan);
-            margin-bottom: 20px;
-        }
-
-        .itemPost {
-            border: none;
-            border-radius: 0;
-            padding: 0;
-            box-shadow: none;
-        }
-
-        .waFix {
-            display: none;
-        }
-
-        form {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding:40px;
-            border-radius: 8px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-          	align-items: center;
-        }
-		.input-group {
-    		padding: 20px;
-		}
-        .orderSummary {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            background-image: linear-gradient(
-                      35deg,
-                      hsl(224deg 86% 34%) 0%,
-                      hsl(209deg 100% 34%) 33%,
-                      hsl(198deg 100% 33%) 67%,
-                      hsl(186deg 86% 34%) 100%
-                    );
-            color: #fff;
-          	border-radius:30px;
-          	font-size:12px;
-          	margin:0 auto;
-          	width:100%;
-            padding:40px;
-		}
-      .orderSummary .detail {
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-      .orderSummary h2{
-      		font-size:20px;
-        color:#fff;
-      	
-      }
-        .input-group label, .orderSummary label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        button {
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-        }
-
-        button:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-        }
-
-        button:hover:enabled {
-            background-color: #0056b3;
-        }
-
-        .productImageWrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            width: 150px;
-            height: 150px;
-            position: relative;
-        }
-
-        .productImage {
-            max-width: 150px;
-            max-height: 150px;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 8px !important;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .defaultImage {
-            max-width: 150px;
-            max-height: 150px;
-        }
-
-        
-        .orderDetails {
-            width: 100%;
-        }
-
-        #productTitle {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 200px;
-        }
-		.unitPriceUSD::before{
-          content:'USD';
-          margin-right:3px;
-          font-weight:bold;
-      }
-        #totalPriceIDR::before {
-            content: 'Rp';
-            margin-right: 3px;
-            font-size: 16px;
-            vertical-align: top;
-            margin-top: 4px;
-            position: relative;
-            display: inline-block;
-        }
-
-        #productQty::before {
-            content: 'x';
-            margin-right: 3px;
-        }
-
-        .detail span {
-            display: block;
-            margin-top: 5px;
-        }
-
-        .detail.total {
-            display: flex !important;
-            justify-content: space-between;
-            align-items: center;
-          	margin-top: 40px;
-    		border-top:1px solid rgb(248 248 248 / 22%);
-        }
-
-        .detail.total label {
-            margin-bottom: 0 !important;
-          	font-size:15px;
-        }
-
-        .detail.total span {
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .payment-buttons {
-            display: flex;
-            gap: 10px;
-            width: 100%;
-          margin-top:20px;
-        }
-
-        .payment-buttons button {
-            flex: 1;
-        }
-
-        .privacy-policy {
-            display: flex;
-            align-items: center;
-            margin-top: 30px;
-        }
-
-        .privacy-policy input, .privacy-policy label {
-            width: auto;
-            margin:0 10px 0 0;
-          	
-        }
-
-        .error-message {
-            color: red;
-            display: none;
-            margin-bottom: 10px;
-        }
-
-        .invalid {
-            border: 2px solid red;
-        }
-      .goloading {
-        	
-            pointer-events: none;
-            opacity: 0.6;
-            background-color: #999;
-        	color: var(--black);
-        }
-      .exchangeRateNote{
-      		margin-top: 30px;
-    		font-size: 12px;
-   			padding: 30px;
-      }
-      .voucher-section{
-      	display: grid;
-        align-items: center;
-        gap: 20px;
-        grid-template-columns: 2fr 1fr;
-        width: 100%;
-      }
-      .voucher-section button,.voucher-section input{
-        margin:0 !important;
-      }
-      
-      .productQty:after{
-      	content:'PAX';
-        margin-left:5px;
-      
-      }
-      #voucherMessage {
-        margin-top: 15px;
-        font-size: 14px;
-        color: #f00; 
-        padding: 10px;
-        background-color: #f9f9f9;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-}
-     #voucherDetail {
-        padding-top: 14px;
-        border-top: 1px solid rgb(248 248 248 / 22%);
-}
-      .ck-diskon {
-        color: rgb(0 255 93);
-        font-weight: 600;
-}
-.bank-details {
-    color:#000;
-    width:100%;
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-.ck-pilih h2{
-      margin-top:20px;
-      
-      }
-.account-info {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-  	font-weight:bold;
-}
-
-.copy-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-  	width:auto;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.copy-button:hover {
-    background-color: #0056b3;
-}
-
-.copy-icon {
-    font-size: 14px;
-    margin-right: 5px;
-}
-
-.copied {
-    animation: copiedAnimation 0.3s ease-out;
-    background-color: #28a745 !important;
-}
-
-@keyframes copiedAnimation {
-    0% { background-color: #007bff; }
-    100% { background-color: #28a745; }
-}
-.disclaimer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    border-radius: 5px;
-}
-
-.disclaimer p {
-    margin: 0;
-    color: #333;
-    font-size: 14px;
-}
+.pageTitle, .waFix.kanan, .shareWrapper, #footer, #header, .feature_tw { display: none; } 
+#page-loader { display: none !important; } 
+body { padding: 0 !important; } 
+.wrapper.postAside { background: #fff; margin-top: 0 !important; } 
+.postAside { display: block; } 
+.pageTitle .item h1 { display: none; } 
+h2 { color: var(--dominan); margin-bottom: 20px; } 
+.itemPost { border: none; border-radius: 0; padding: 0; box-shadow: none; } 
+.waFix { display: none; } 
+form { max-width: 1000px; margin: 20px auto; padding: 40px; border-radius: 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; } 
+.input-group { padding: 20px; } 
+.orderSummary { display: flex; flex-direction: column; align-items: flex-start; background-image: linear-gradient(35deg, hsl(224deg 86% 34%) 0%, hsl(209deg 100% 34%) 33%, hsl(198deg 100% 33%) 67%, hsl(186deg 86% 34%) 100%); color: #fff; border-radius: 30px; font-size: 12px; margin: 0 auto; width: 100%; padding: 40px; } 
+.orderSummary .detail { margin-bottom: 10px; display: flex; justify-content: space-between; } 
+.orderSummary h2 { font-size: 20px; color: #fff; } 
+.input-group label, .orderSummary label { font-weight: bold; margin-bottom: 5px; } 
+input, textarea, button { width: 100%; padding: 10px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px; } 
+textarea { resize: vertical; min-height: 80px; } 
+button { background-color: #007BFF; color: white; cursor: pointer; transition: background-color 0.3s; margin-top: 20px; } 
+button:disabled { background-color: #cccccc; cursor: not-allowed; } 
+button:hover:enabled { background-color: #0056b3; } 
+.productImageWrapper { display: flex; justify-content: center; align-items: center; margin-bottom: 20px; width: 150px; height: 150px; position: relative; } 
+.productImage { max-width: 150px; max-height: 150px; height: auto; border: 1px solid #ddd; border-radius: 8px !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; object-fit: cover; position: absolute; top: 0; left: 0; } 
+.defaultImage { max-width: 150px; max-height: 150px; } 
+.orderDetails { width: 100%; } 
+#productTitle { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; } 
+.unitPriceUSD::before { content: 'USD'; margin-right: 3px; font-weight: bold; } 
+#totalPriceIDR::before { content: 'Rp'; margin-right: 3px; font-size: 16px; vertical-align: top; margin-top: 4px; position: relative; display: inline-block; } 
+#productQty::before { content: 'x'; margin-right: 3px; } 
+.detail span { display: block; margin-top: 5px; } 
+.detail.total { display: flex !important; justify-content: space-between; align-items: center; margin-top: 40px; border-top: 1px solid rgb(248 248 248 / 22%); } 
+.detail.total label { margin-bottom: 0 !important; font-size: 15px; } 
+.detail.total span { font-size: 30px; font-weight: bold; } 
+.payment-buttons { display: flex; gap: 10px; width: 100%; margin-top: 20px; } 
+.payment-buttons button { flex: 1; } 
+.privacy-policy { display: flex; align-items: center; margin-top: 30px; } 
+.privacy-policy input, .privacy-policy label { width: auto; margin: 0 10px 0 0; } 
+.error-message { color: red; display: none; margin-bottom: 10px; } 
+.invalid { border: 2px solid red; } 
+.goloading { pointer-events: none; opacity: 0.6; background-color: #999; color: var(--black); } 
+.exchangeRateNote { margin-top: 30px; font-size: 12px; padding: 30px; } 
+.voucher-section { display: grid; align-items: center; gap: 20px; grid-template-columns: 2fr 1fr; width: 100%; } 
+.voucher-section button, .voucher-section input { margin: 0 !important; } 
+.productQty:after { content: 'PAX'; margin-left: 5px; } 
+#voucherMessage { margin-top: 15px; font-size: 14px; color: #f00; padding: 10px; background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 4px; } 
+#voucherDetail { padding-top: 14px; border-top: 1px solid rgb(248 248 248 / 22%); } 
+.ck-diskon { color: rgb(0 255 93); font-weight: 600; } 
+.bank-details { color: #000; width: 100%; margin-top: 20px; padding: 15px; border: 1px solid #ddd; background-color: #f9f9f9; border-radius: 5px; } 
+.ck-pilih h2 { margin-top: 20px; } 
+.account-info { display: flex; align-items: center; margin-top: 5px; font-weight: bold; } 
+.copy-button { background-color: #007bff; color: white; border: none; padding: 5px 10px; width: auto; border-radius: 3px; cursor: pointer; margin-left: 10px; transition: background-color 0.3s ease; } 
+.copy-button:hover { background-color: #0056b3; } 
+.copy-icon { font-size: 14px; margin-right: 5px; } 
+.copied { animation: copiedAnimation 0.3s ease-out; background-color: #28a745 !important; } 
+@keyframes copiedAnimation { 0% { background-color: #007bff; } 100% { background-color: #28a745; } } 
+.disclaimer { margin-top: 20px; padding: 10px; background-color: #ffdddd; border-left: 6px solid #f44336; border-radius: 5px; } 
+.disclaimer p { margin: 0; color: #333; font-size: 14px; }
